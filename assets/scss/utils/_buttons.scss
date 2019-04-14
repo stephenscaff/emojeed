@@ -1,0 +1,52 @@
+//----------------------------------------------
+//  Button Theme / Reset
+//----------------------------------------------
+$btn-pad: 1em 2.75em 1.05em;
+$btn-pad-lg: 0.9em 3.75em;
+$btn-pad-sm: 1.5em 2em 1.45em;
+
+@mixin btn-theme {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  @include font-uppercase;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-appearance: none;
+  backface-visibility: hidden;
+}
+
+
+//----------------------------------------------
+//  Basic Button
+//----------------------------------------------
+.btn{
+  @include btn-theme;
+  padding: 1.25rem 3rem 1.15rem;
+  color: $color-white;
+  background-color: $color-alpha;
+  border: 1px solid;
+  border-color: $color-alpha;
+  border-radius: $base-border-radius;
+  transition: background-color 0.5s $ease-cb-2, color 0.5s $ease-cb-2, border-color 0.5s $ease-cb-2;
+
+  &:hover, &:focus{
+    color: $color-white;
+    background-color: $color-grey-dark;
+    border-color: $color-grey-dark;
+    transition: background-color 0.7s $ease-cb-2, color 0.7s $ease-cb-2, border-color 0.7s $ease-cb-2;
+  }
+
+  // Has icon (via icon font)
+  // @see scss/fonts/_iconfont.scss - for available icons
+  i {
+    padding-right: 1em;
+  }
+}

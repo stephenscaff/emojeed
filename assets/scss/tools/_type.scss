@@ -1,0 +1,68 @@
+//----------------------------------------------
+//  Font RWD
+//  Change font-size across breaks
+//  @param: $font_sm  - at small
+//  @param: $font_med - at med break
+//  @param: $font_lg  - at Large break
+//  @param: $font_xl  - at Xlarge break
+//----------------------------------------------
+@mixin font-rwd(
+  $sm:null,
+  $med:null,
+  $lg:null,
+  $xl:null,
+  $xxl:null
+  ) {
+  font-size: $sm;
+
+  @if $med {
+    @media(min-width: $mq-med){
+      font-size: $med;
+    }
+  }
+
+  @if $lg {
+    @media(min-width: $mq-lg){
+      font-size: $lg;
+    }
+  }
+
+  @if $xl {
+    @media(min-width: $mq-xl){
+      font-size: $xl;
+    }
+  }
+
+  @if $xxl {
+    @media(min-width: $mq-xxl){
+      font-size: $xxl;
+    }
+  }
+}
+
+
+//----------------------------------------------
+//  Type Preset Styles
+//----------------------------------------------
+
+@mixin font-uppercase($font-size: $font-xs, $font-weight: 700) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+//----------------------------------------------
+//  Type Formating
+//----------------------------------------------
+@mixin text-overflow($width:90%) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: $width;
+}
+
+@mixin text-single-line {
+  word-spacing: 9999px;
+  display: block;
+}

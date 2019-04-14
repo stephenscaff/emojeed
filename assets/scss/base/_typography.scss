@@ -1,0 +1,45 @@
+body {
+  font-family: $font-paragraph;
+}
+
+//----------------------------------------------
+//  Typography : Headings Setup
+//----------------------------------------------
+h1,h2,h3,h4,h5{
+  font-family: $font-header;
+  font-weight: 500;
+  color: $color-grey-dark;
+}
+
+//----------------------------------------------
+//  Headings
+//----------------------------------------------
+%font-xxl, h1 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.35;
+  @include font-rwd($font-xxl, $font-xxxl)
+}
+
+%font-xl, h2 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.35;
+  @include font-rwd($font-xl, $font-xxl)
+}
+
+%font-lg, h3 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.4;
+  @include font-rwd($font-lg, $font-xl)
+}
+
+%font-med, h4 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.45;
+  @include font-rwd($font-med)
+}
+
+%font-base, h5 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.35;
+  @include font-rwd($font-base)
+}

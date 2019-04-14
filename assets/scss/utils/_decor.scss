@@ -1,0 +1,39 @@
+//--------------------------------------------
+// Lines / Seperators
+//--------------------------------------------
+.sep{
+  display: block;
+  border:0;
+  height: 1px;
+  width: 100%;
+  background-color: $color-grey-borders;
+  margin: $pad-sm 0;
+}
+
+//--------------------------------------------
+// Vert Seperator
+//--------------------------------------------
+.vert-sep {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.25em;
+  width: 2px;
+  height: 1em;
+  line-height: 1;
+  background-color: $color-grey-dark;
+
+  &.is-white {
+    background-color: $color-white;
+  }
+}
+
+//--------------------------------------------
+// Has borders
+//--------------------------------------------
+.has-border-top {
+  border-top: 1px solid #ddd;
+}
+
+.has-border-bottom {
+  border-bottom: 1px solid #ddd;
+}
