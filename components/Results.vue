@@ -20,7 +20,15 @@
                 <span class="article__source">{{ article.source.name }}</span>
                 <span class="article__headline">{{ article.title }}</span>
               </h4>
-              <div class="article__author">{{ article.author }}</div>
+              <div class="article__author">
+                <img
+                  class="article__author-avatar"
+                  :src="article.source.name | getSourceAvatar"
+                />
+                <span class="article__author-name">
+                  {{ article.author | capitalize }}
+                </span>
+              </div>
             </header>
           </a>
         </article>
@@ -129,21 +137,35 @@ export default {
     font-weight: 400;
     font-size: 1em;
   }
+
   &__source {
     display: block;
     font-weight: 700;
     margin-bottom: 0.75em;
   }
+
   &__headline {
     display: block;
     max-width: 30em;
   }
+
   &__author {
-    display: block;
-    margin-top: 0.75em;
+    display: flex;
+    align-items: center;
+    margin-top: $pad-sm;
     font-family: $font-mono;
     font-size: 0.8em;
     color: #999;
+
+    &-avatar {
+      width: 2em;
+      height: 2em;
+      border-radius: 100%;
+      margin-right: 1em;
+    }
+
+    &-name {
+    }
   }
 }
 </style>

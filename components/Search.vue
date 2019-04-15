@@ -9,8 +9,8 @@
         <input
           class="search__input"
           name="topic"
-          @input="changed"
           placeholder="Seach for shit"
+          @input="changed"
         />
       </div>
     </div>
@@ -68,10 +68,6 @@ export default {
     padding-left: 1em;
     font-family: $font-sans;
     font-size: 1.25em;
-
-    @media (min-width: $mq-med) {
-      width: 40%;
-    }
   }
 }
 </style>

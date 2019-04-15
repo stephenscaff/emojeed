@@ -32,7 +32,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~plugins/filters.js'
+  ],
 
   /*
    ** Nuxt.js modules
@@ -78,7 +80,10 @@ export default {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
+          options : {
+            fix : true
+          }
         })
       }
     },
@@ -86,10 +91,10 @@ export default {
     plugins: [
       new webpack.ProvidePlugin({
         '_': 'lodash'
-      })
+      }),
     ]
   },
-  
+
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   }
